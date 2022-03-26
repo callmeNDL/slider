@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url(font/Mulish/static/Mulish-Medium.ttf);
+}
+body {
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+}
+.content-padding-mb {
+    padding: 20px 0;
+}
+.header {
+    padding: 15px 0;
+}
+.btn-primary {
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 18px;
+}
+.nav-link {
+    margin-right: 48px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+.btn-log-in{
+    padding: 12px 18px;
+}
+.btn-log-in:hover {
+    opacity: 0.9;
+}
+/* banner */
+.banner-content .title {
+    margin-bottom: 40px;
+}
+.banner-content .desc {
+    margin-bottom: 56px;
+}
+.btn-banner {
+    margin-bottom: 20px;
+}
+/* slider */
+
+.item__desc {
+    margin-top: 24px;
+    font-size: 26px;
+}
+.item__info {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+/* features */
+.features-title {
+    margin-bottom: 56px;
+}
+.features-title h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+.feature-img {
+    margin-bottom: 24px;  
+}
+.feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.feature-info {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+/* product */
+.product-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 25px;
+    margin-bottom: 32px;
+}
+.product-desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 48px
+}
+.product-image {
+    margin-bottom: 166px;
+}
+.btn-product {
+    margin-bottom: 20px;
+}
+/* services */
+.services-img img {
+    width: 100%;
+}
+.services-content {
+    padding-top: 72px;
+}
+.service img {
+    margin-bottom: 16px;
+}
+.service p {
+    font-size: 16px;
+    line-height: 22px;
+}
+.service {
+    margin-bottom: 48px;
+}
+/* connect */
+.connect h2 {
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.connect-desc {
+    line-height: 22px;
+    margin-bottom: 56px;
+}
+.connect-desc p {
+    margin-bottom: 0;
+}
+.footer {
+    padding: 24px 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+@media (min-width: 1200px) {
+    .header-box {
+        padding: 164px 0 120px;
+    }
+    .banner-content .title h1 {
+        font-size: 2.75rem;
+    }
+    .features {
+        padding: 120px 0 40px;
+    }
+    .product {
+        padding: 138px 0;
+    }
+    .services {
+        padding: 90px 0;
+    }
+    .services-content .service:nth-child(3),
+    .services-content .service:nth-child(4) {
+        margin-bottom: 0;
+    }
+    .connect {
+        padding: 64px 0;
+    }
+}

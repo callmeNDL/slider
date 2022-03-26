@@ -1,0 +1,22 @@
+{
+  "name": "engineer-interns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/bluecoral/cyberbase/engineer-interns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/bluecoral/cyberbase/engineer-interns/issues"
+  },
+  "homepage": "https://gitlab.com/bluecoral/cyberbase/engineer-interns#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
