@@ -4,30 +4,33 @@ $(document).ready(function () {
   const sliderMain = $(".slider");
   // const sliderWrap = $(".sliders__body")
   let slides = $(".item");
-  let index = 1;
+  var index = 1;
+  var sliderItemWidth = slides[index].offsetWidth;
+  const sliderLength = slides.length;
 
   const firstCloneId = 'first-clone';
   const lastCloneId = 'last-clone';
 
-  const firstClone = $(slides[0]).clone();
-  const lastClone = $(slides[slides.length - 1]).clone();
+  function createItemClone() {
+    const firstClone = $(slides[0]).clone();
+    const lastClone = $(slides[slides.length - 1]).clone();
 
-  firstClone.attr('id', firstCloneId);
-  lastClone.attr('id', lastCloneId);
+    firstClone.attr('id', firstCloneId);
+    lastClone.attr('id', lastCloneId);
 
-  sliderMain.append(firstClone)
-  sliderMain.prepend(lastClone)
+    sliderMain.append(firstClone)
+    sliderMain.prepend(lastClone)
+  }
 
-  const sliderItemWidth = slides[index].offsetWidth;
-  const sliderLength = slides.length;
+
   sliderMain.css('transform', `translateX(${-sliderItemWidth * index}px)`);
   let isInit = true;
-  let reInit = false;
+  var reInit = false;
   let myInterval = null;
   options = {
     time: 3000,
     isNavigation: true,
-    isAutoplay: true,
+    isAutoplay: false,
   }
 
   const getSlides = () => $(".item");
@@ -45,14 +48,19 @@ $(document).ready(function () {
 
   function initSlider(options) {
     createArrowButton();
+    createItemClone();
     options.isNavigation && createDots();
     handleArrowButton();
     options.isNavigation && handleDotClick();
     options.isAutoplay && autoplay(options.time);
-    transitionend();
   }
   // initSlider(options);
+  $(window).resize(function () {
+    const width = $(window).width()
+    sliderItemWidth = slides[index].offsetWidth;
+    onSetWidthSlider(width)
 
+  });
   windowWidth = window.innerWidth;
   onSetWidthSlider(windowWidth)
   function onSetWidthSlider(width) {
@@ -64,7 +72,8 @@ $(document).ready(function () {
       } else {
         if (reInit) {
           $(".sliders").addClass("sliders--desktop").removeClass("sliders--mobile");
-          index = 1;
+          debugger
+          sliderMain.css('transform', `translateX(${-sliderItemWidth * index}px)`);
           initSlider(options);
           console.log("re-init");
           reInit = false
@@ -81,16 +90,10 @@ $(document).ready(function () {
     }
   }
 
-  $(window).resize(function () {
-    const width = $(window).width()
-    onSetWidthSlider(width)
-  });
-
   function createArrowButton() {
     sliderMain.before(`<img class="slider__prev" src="./image/icon/left.svg" alt="Prev slide">`);
     sliderMain.after(`<img class="slider__next" src="./image/icon/right.svg" alt="Prev slide">`);
   }
-
   function createDots() {
     let dots = `<ul class="slider__dots">`
     for (let i = 1; i <= sliderLength; i++) {
@@ -104,7 +107,6 @@ $(document).ready(function () {
   function handleArrowButton() {
     $(".slider__next").on("click", function () {
       handleChangeSlide('next');
-      // console.log(this);
     });
     $(".slider__prev").on("click", function () {
       handleChangeSlide('prev');
@@ -143,23 +145,17 @@ $(document).ready(function () {
       sliderMain.css('transform', `translateX(${-sliderItemWidth * index}px)`);
     }
     $(".slider__dots li").removeClass('dot--active');
-    console.log(options.isAutoplay);
     if (options.isAutoplay && option !== 'autoplay') {
       autoplay(options.time);
     }
   }
-  function transitionend() {
-    console.log("end");
-    sliderMain.on('transitionend', () => {
-      slides = getSlides();
-      index = getIndex(index)
-
-      sliderMain.css({ "transition": 'none' })
-      sliderMain.css('transform', `translateX(${-sliderItemWidth * index}px)`);
-      $($(".slider__dots li")[index - 1]).addClass("dot--active");
-    })
-  }
-
+  sliderMain.on('transitionend', () => {
+    slides = getSlides();
+    index = getIndex(index)
+    sliderMain.css({ "transition": 'none' })
+    sliderMain.css('transform', `translateX(${-sliderItemWidth * index}px)`);
+    $($(".slider__dots li")[index - 1]).addClass("dot--active");
+  })
 
   function autoplay(time) {
     myInterval = setInterval(() => {
@@ -167,5 +163,3 @@ $(document).ready(function () {
     }, time);
   }
 });
-
-
