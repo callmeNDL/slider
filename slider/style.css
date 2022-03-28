@@ -1,138 +1,138 @@
 @font-face {
     font-family: 'Mulish';
     src: url(font/Mulish/static/Mulish-Medium.ttf);
-}
-body {
+ }
+ body {
     font-family: 'Mulish', sans-serif;
     box-sizing: border-box;
-}
-.content-padding-mb {
+ }
+ .content-padding-mb {
     padding: 20px 0;
-}
-.header {
+ }
+ .header {
     padding: 15px 0;
-}
-.btn-primary {
+ }
+ .btn-primary {
     border: none;
     font-size: 14px;
     line-height: 18px;
     padding: 15px 18px;
-}
-.nav-link {
+ }
+ .nav-link {
     margin-right: 48px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-}
-.btn-log-in{
+ }
+ .btn-log-in{
     padding: 12px 18px;
-}
-.btn-log-in:hover {
+ }
+ .btn-log-in:hover {
     opacity: 0.9;
-}
-/* banner */
-.banner-content .title {
+ }
+ /* banner */
+ .banner-content .title {
     margin-bottom: 40px;
-}
-.banner-content .desc {
+ }
+ .banner-content .desc {
     margin-bottom: 56px;
-}
-.btn-banner {
+ }
+ .btn-banner {
     margin-bottom: 20px;
-}
-/* slider */
-
-.item__desc {
+ }
+ /* slider */
+  
+ .item__desc {
     margin-top: 24px;
     font-size: 26px;
-}
-.item__info {
+ }
+ .item__info {
     margin-top: 40px;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 20px;
-}
-/* features */
-.features-title {
+ }
+ /* features */
+ .features-title {
     margin-bottom: 56px;
-}
-.features-title h1 {
+ }
+ .features-title h1 {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 0;
-}
-.feature-img {
-    margin-bottom: 24px;  
-}
-.feature-title {
+ }
+ .feature-img {
+    margin-bottom: 24px; 
+ }
+ .feature-title {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 12px;
-}
-.feature-info {
+ }
+ .feature-info {
     margin-bottom: 40px;
     font-size: 14px;
-}
-/* product */
-.product-title {
+ }
+ /* product */
+ .product-title {
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
     margin-top: 25px;
     margin-bottom: 32px;
-}
-.product-desc {
+ }
+ .product-desc {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 48px
-}
-.product-image {
+ }
+ .product-image {
     margin-bottom: 166px;
-}
-.btn-product {
+ }
+ .btn-product {
     margin-bottom: 20px;
-}
-/* services */
-.services-img img {
+ }
+ /* services */
+ .services-img img {
     width: 100%;
-}
-.services-content {
+ }
+ .services-content {
     padding-top: 72px;
-}
-.service img {
+ }
+ .service img {
     margin-bottom: 16px;
-}
-.service p {
+ }
+ .service p {
     font-size: 16px;
     line-height: 22px;
-}
-.service {
+ }
+ .service {
     margin-bottom: 48px;
-}
-/* connect */
-.connect h2 {
+ }
+ /* connect */
+ .connect h2 {
     line-height: 40px;
     font-weight: 700;
     margin-bottom: 32px;
-}
-.connect-desc {
+ }
+ .connect-desc {
     line-height: 22px;
     margin-bottom: 56px;
-}
-.connect-desc p {
+ }
+ .connect-desc p {
     margin-bottom: 0;
-}
-.footer {
+ }
+ .footer {
     padding: 24px 0;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
-}
-@media (min-width: 1200px) {
+ }
+ @media (min-width: 1200px) {
     .header-box {
         padding: 164px 0 120px;
     }
@@ -155,4 +155,7 @@ body {
     .connect {
         padding: 64px 0;
     }
-}
+ }
+  
+ 
+ 
